@@ -55,7 +55,6 @@ def main():
     df = pd.DataFrame(information)
     df = df[df['deletable'] == True]
     df['balance'] = df['nickname'].apply(get_balance)
-    df = df[(df['nickname'] != 'rot') & (df['nickname'] != 'Ourord')]
     rows = sql_fetch(con)
 
     df2 = pd.DataFrame(rows)
