@@ -1,6 +1,8 @@
 import sqlite3
 from sqlite3 import Error
 
+# This file contains the initial functions to interact with a database from python3; it will create a table 
+# called equity which will contain date, equity (balance), difference from last hour/period, and the increase in %
 
 def sql_connection():
     try:
