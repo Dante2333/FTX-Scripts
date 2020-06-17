@@ -4,7 +4,7 @@ from sqlite3 import Error
 
 def sql_connection():
     try:
-        con = sqlite3.connect('equity2.db')
+        con = sqlite3.connect('equity.db')
         return con
     except Error:
         print('There was a database error while connecting to it')
