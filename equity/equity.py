@@ -33,10 +33,18 @@ def report2(value):
     date, actual, difference, increase = value
     difference = float(difference)
     if difference < 0:
-        my_message = 'For {}, your equity has decreased by {}, total loss is {}%'.format(date, increase, difference)
+        my_message = ("`Date:{}`\n"
+                "\t`Decreased:${}`\n"
+                "\t`Total profit:{}%`\n"
+                "\t`Overall balance:${}`").format(date, difference, increase, actual)
+
     else:
-        my_message = 'For {}, your equity has increased by {}, total profit is {}%'. format(date, increase, difference)
+        my_message = ("`Date:{}`\n"
+                "\t`Increased:${}`\n"
+                "\t`Total profit:{}%`\n"
+                "\t`Overall balance:${}`").format(date, difference, increase, actual)
     telegram_bot_sendtext(my_message)
+
 
 def main():
     now = datetime.now()
