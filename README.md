@@ -3,8 +3,6 @@ Useful FTX scripts which serve multiples purposes
 
 # Dependencies
 
-databaseEQ.py
-
 pandas
 
 client.py from https://github.com/ftexchange/ftx/blob/master/rest/client.py
